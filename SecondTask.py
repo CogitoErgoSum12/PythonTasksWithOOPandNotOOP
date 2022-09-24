@@ -1,13 +1,8 @@
 import sys
 import ast
 
-
-input_element = int(sys.argv[1])
-
-input_element = sys.argv[1:]
-
-print(input_element)
-
-
-
-
+try:
+    input_element = ast.literal_eval(sys.argv[1])
+    print(type(input_element))
+except:
+    print("<class 'string'>")
